@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AnimalsDiario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+  
+    <ion-item>
+      <ion-input label="Nome" placeholder="Insira o nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Raro?" placeholder="Insira se e raro ou nao" [(ngModel)]="raridade"></ion-input>
+    </ion-item>
+
+  <ion-item>
+      <ion-select label="Especie" placeholder="Selecione" [(ngModel)]="especie">
+        <ion-select-option value="0">Mamiferos</ion-select-option>
+        <ion-select-option value="1">Aves</ion-select-option>
+        <ion-select-option value="2">Repteis</ion-select-option>
+        <ion-select-option value="3">Anfibios</ion-select-option>
+        <ion-select-option value="4">Peixes</ion-select-option>
+        <ion-select-option value="5">Invertebrados</ion-select-option>
+        <ion-select-option value="6">Artopodes</ion-select-option>
+        <ion-select-option value="7">Moluscos</ion-select-option>
+        <ion-select-option value="8">Equinodernos</ion-select-option>
+        <ion-select-option value="9">Cordados</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+<ion-item>
+      <ion-select label="Gênero" placeholder="Selecione" [(ngModel)]="genero">
+        <ion-select-option value="0">Macho</ion-select-option>
+        <ion-select-option value="1">Femea</ion-select-option>
+        <ion-select-option value="2">Não Declarado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
+  </ion-list>
+</ion-content>

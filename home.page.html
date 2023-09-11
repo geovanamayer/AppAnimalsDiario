@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id="titulo">AnimalsDiario</ion-title>
+<!--  
+    <ion-content>
+      <ion-searchbar></ion-searchbar>
+      <ion-searchbar (ionInput)="onSearch($event)"></ion-searchbar>
+    </ion-content>
+ -->
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list *ngFor="let contato of this.listaDeContatos; let i = index">
+  <ion-item (click)="editar(i)">
+     <ion-label>{{contato.nome}}</ion-label>
+  </ion-item>
+  </ion-list>
+
+<!-- <ion-content class="img">
+  <ion-img class="img" src="assets/boi.webp" ></ion-img>
+</ion-content>
+  <ion-content class="img">
+    <ion-img class="img-lobo" src="assets/lobo.jpg"></ion-img>
+  </ion-content> -->
+
+
+
+  <ion-icon name="dog_cabe.png"></ion-icon>
+  
+  <ion-fab horizontal="end" vertical="bottom">
+    <ion-fab-button (click)="irParaCadastrar()" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
